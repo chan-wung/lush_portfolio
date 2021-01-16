@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LUSH</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hamberger.css">
+    <script src="js/jquery1.js"></script>
+    <style media="screen">
+    .overlay {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border:#fff solid 1px;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgb(0, 0, 0);
+      text-align: center;
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .shout_cut:hover .overlay {
+      opacity: 1;
+    }
+    .overlay > p{
+      position: absolute;
+      top:-20%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+/* ------------------------------------------------------------------ */
+
+#section03{
+    width: 100%;
+    height: 1200px;
+    position:relative;
+}
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼이건 있어야 하는거같은데 자세히 안봄 주석처리해서 알아서 봐보셈 */
+
+.section03-inner-wrap .display-wrap{
+    width: 820px;
+    height: 600px;
+    position: absolute;
+    top: 22%;
+    left: 44%;
+    transform: translateX(-50%);
+}
+
+.section03-inner-wrap .display-wrap .display{
+    position: relative;
+    left: 0;
+}
+.section03-inner-wrap .display-wrap .display ul{
+    width:2500px;
+
+}
+.section03-inner-wrap .display-wrap .display ul >li{
+    position: absolute;
+    width: 865px;
+    height: 400px;
+    display: inline-block;
+    transition: all .3s ease-in-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+
+/* ▼▼▼▼사진 */
+.display01{
+    background-image: url(image/cam1.png);
+}
+.display02{
+    background-image: url(image/cam2.png);
+}
+.display03{
+    background-image: url(image/cam1.png);
+}
+.display04{
+    background-image: url(image/cam3.png);
+}
+
+
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼이미지? css인듯 */
+.main-pos {
+    margin-left: 2em !important;
+    z-index: 2000;
+      transform: scale(.7);
+}
+
+.left-pos {
+    opacity: .6;
+    margin-left: -27em !important;
+    z-index: 1000;
+    margin-top:10px;
+    transform: scale(.50);
+}
+
+.back-pos {
+    margin-left: 2em !important;
+    opacity: .05;
+    transform: scale(.5);
+}
+
+.right-pos {
+    opacity: .6;
+    margin-left:  31.1em !important;
+    z-index: 1000;
+    margin-top:10px;
+    transform: scale(.50);
+}
+
+
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼버튼 css 인듯 */
+.display-btn{}
+.display-before{
+    position: absolute;
+    top: 40%;
+    left:10%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height:100px;
+    background-image: url(images/before_b.png);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    cursor: pointer;
+    /* cursor: url(../images/cursor03.png), auto; */
+}
+.display-after{
+    position: absolute;
+    top: 40%;
+    right: 9%;
+    transform: translateY(-50%);
+    width: 100px;
+    height:100px;
+    background-image: url(images/after-b.png);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+    cursor: pointer;
+    /* cursor: url(../images/cursor03.png), auto; */
+}
+
+    </style>
+  </head>
+  <body>
+  <div id="wrap">
+    <div class="video">
+      <video autoplay muted loop>
+        <source src="lush.mp4" type="video/mp4">
+      </video>
+      <header>
+        <h1><a href="#">LUSH</a></h1>
+        <div class="loginbox">
+          <div class="login"><a href="#">LOGIN</a> </div>
+          <div class="join"><a href="#">JOIN</a> </div>
+        </div>
+        <div class="stage">
+          <div class="container">
+            <div class="line-top"></div>
+            <div class="line-middle"></div>
+            <div class="line-bottom"></div>
+          </div>
+        </div>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#">PRODUCT</a>
+            <ul class="submenu">
+            <li> <h3>배쓰</h3>
+              <ul>
+              <li><a href="#">-배쓰밤</a> </li>
+              <li><a href="#">-배쓰오일</a> </li>
+            </ul> </li>
+            <li><h3>보디</h3>   <ul>
+              <li><a href="#">-샤워 젤&젤리</a> </li>
+              <li><a href="#">-샤워 오일</a> </li>
+              <li><a href="#">-보디 컨디셔너</a> </li>
+              <li><a href="#">-스크럽&버</a> </li>
+            </ul> </li>
+            <li><h3>페이스</h3>   <ul>
+              <li><a href="#">-클렌저</a> </li>
+              <li><a href="#">-페이스 마스크</a> </li>
+              <li><a href="#">-토너</a> </li>
+              <li><a href="#">-모이스춰라이저</a> </li>
+            </ul> </li>
+            <li><h3>헤어</h3>   <ul>
+              <li><a href="#">-샴푸</a> </li>
+              <li><a href="#">-컨디셔너</a> </li>
+              <li><a href="#">-트리트먼트</a> </li>
+            </ul> </li>
+            <li><h3>퍼퓸</h3>   <ul>
+              <li><a href="#">-보디 스프레이</a> </li>
+              <li><a href="#">-솔리드 퍼퓸</a> </li>
+            </ul>
+            </ul> </li>
+        </li>
+          <li><a href="#">BRAND</a><ul class="submenu">
+            <li><h3>러쉬</h3>
+            <ul>
+            <li><a href="#">About 러쉬</a> </li>
+            </ul> </li>
+            <li><a href="#"><h3>채러티 팟</h3></a> </li>
+            <li><a href="#"><h3>캠페인</h3></a> </li>
+            <li><a href="#"><h3>원재료</h3></a> </li>
+            <li><a href="#"><h3>아티클</h3></a> </li>
+          </ul> </li>
+          <li><a href="#">STORE</a> </li>
+          <li><a href="#">EVENT</a> </li>
+        </ul>
+      </nav>
+      <!-- <div class="nav_box">
+        <ul class="submenu">
+        <li><a href="#">배쓰</a>
+          <ul>
+          <li><a href="#">-배쓰밤</a> </li>
+          <li><a href="#">-배쓰오일</a> </li>
+        </ul> </li>
+        <li><a href="#">보디</a>   <ul>
+          <li><a href="#">-샤워 젤&젤리</a> </li>
+          <li><a href="#">-샤워 오일</a> </li>
+          <li><a href="#">-보디 컨디셔너</a> </li>
+          <li><a href="#">-스크럽&버</a> </li>
+        </ul> </li>
+        <li><a href="#">페이스</a>   <ul>
+          <li><a href="#">-클렌저</a> </li>
+          <li><a href="#">-페이스 마스크</a> </li>
+          <li><a href="#">-토너</a> </li>
+          <li><a href="#">-모이스춰라이저</a> </li>
+        </ul> </li>
+        <li><a href="#">헤어</a>   <ul>
+          <li><a href="#">-샴푸</a> </li>
+          <li><a href="#">-컨디셔너</a> </li>
+          <li><a href="#">-트리트먼트</a> </li>
+        </ul> </li>
+        <li><a href="#">퍼퓸</a>   <ul>
+          <li><a href="#">-보디 스프레이</a> </li>
+          <li><a href="#">-솔리드 퍼퓸</a> </li>
+        </ul> </li>
+      </ul>
+
+      </div> -->
+    </div>
+  <section class="product">
+    <h1><img src="image/best.png" alt="제목:베스트제품"></h1>
+    <div class="container2">
+      <div class="img_box">
+        <div class="best_img">
+          <div class="product_box">
+            <img src="image/1.png" alt="" class="jo">
+          </div>
+
+          <p class="cart_t">플럼 레인 100g/270g/540g</p>
+          <p class="cart_s">#자두향기 #샤워젤</p>
+          <p class="cart_c">19,000원</p>
+        </div>
+      </div>
+
+        <div class="best_img">
+        <div class="product_box">
+          <img src="image/2.png" alt="" class="jo2">
+        </div>
+          <p class="cart_t">카타스트로피 코스메틱</p>
+          <p class="cart_s">#블루베리팩 #슈퍼푸드블루배리</p>
+          <p class="cart_c">25,000원</p>
+        </div>
+
+
+        <div class="best_img">
+        <div class="product_box">
+          <img src="image/3.png" alt="" class="jo3">
+        </div>
+          <p class="cart_t">브레스 오브 프레쉬 에어 100g/250g</p>
+          <p class="cart_s">#토너 #알로에베라와신선한바닷물</p>
+          <p class="cart_c">14,000원</p>
+        </div>
+
+
+        <div class="best_img">
+        <div class="product_box">
+          <img src="image/4.png" alt="" class="jo4">
+        </div>
+          <p class="cart_t">슬리피 팩</p>
+          <p class="cart_s">#잘때도소중한내얼굴 #마스크팩</p>
+          <p class="cart_c">25,000원</p>
+        </div>
+
+
+        <div class="best_img">
+        <div class="product_box">
+          <img src="image/5.png" alt="" class="jo5">
+        </div>
+          <p class="cart_t">스노우 페어리 스프레이</p>
+          <p class="cart_s">#겨울향기 #바디스프레이</p>
+          <p class="cart_c">50,000원</p>
+        </div>
+
+
+        <div class="best_img">
+        <div class="product_box">
+          <img src="image/6.png" alt=""  class="jo4">
+        </div>
+          <p class="cart_t">허벌리즘 100g/270g</p>
+          <p class="cart_s">#녹색시간 #마스크팩</p>
+          <p class="cart_c">19,000원</p>
+        </div>
+
+    </div>
+
+
+  </section>
+  <section class="spray">
+  <img src="image/spray2.png" alt="">
+  <div class="shout_cut">
+  <p>바로가기</p>
+  <!-- <div class="overlay">
+  <p>바로가기</p>
+  </div> -->
+  </div>
+
+  </section>
+  <section class="package">
+    <h1><img src="image/package.png" alt="제목:패키지"></h1>
+
+      <ul>
+        <div class="container2">
+        <li><img src="image/Lush01.jpg" alt="제목:패키지" ></li>
+        <li><img src="image/Lush02.jpg" alt="제목:패키지"></li>
+        <li><img src="image/Lush03.png" alt="제목:패키지"></li>
+        </div>
+      </ul>
+
+
+  </section>
+  <section class="gift">
+    <img src="image/gift.jpg" alt="">
+  </section>
+  <section class="cartbox">
+    <div class="container2">
+      <div class="img_box">
+        <div class="best_img">
+          <div class="best_ib">
+        <img src="image/7.png" alt="" class="img_scale ji">
+          </div>
+
+          <p class="cart_t">릴렉스</p>
+          <p class="cart_s">#기프트 #마음을편안하게해주는라벤더</p>
+          <p class="cart_c">59,000원</p>
+        </div>
+      </div>
+
+        <div class="best_img">
+          <div class="best_ib">
+            <img src="image/8.png" alt="" class="img_scale ji2">
+            </div>
+
+          <p class="cart_t">너는 별이야</p>
+          <p class="cart_s">#기프트 #러쉬핫템다가져 #향기풀풀</p>
+          <p class="cart_c">78,000원</p>
+        </div>
+
+
+        <div class="best_img">
+          <div class="best_ib">
+              <img src="image/9.png" alt="" class="img_scale ji3">
+            </div>
+
+          <p class="cart_t">셀러브레이트</p>
+          <p class="cart_s">#기프트 #화려한빛을담은멜로디와과일향기풍부한</p>
+          <p class="cart_c">101,000원</p>
+        </div>
+
+
+        <div class="best_img">
+          <div class="best_ib">
+            <img src="image/13.png" alt="" class="img_scale ji4">
+            </div>
+
+          <p class="cart_t">띵크 핑크</p>
+          <p class="cart_s">#핑크핑크 #하늘이분홍빛</p>
+          <p class="cart_c">92,000원</p>
+        </div>
+
+
+        <div class="best_img">
+          <div class="best_ib">
+            <img src="image/11.png" alt="" class="img_scale ji5">
+            </div>
+
+          <p class="cart_t">매력적인 너</p>
+          <p class="cart_s">#너한테딱맞는선물 #그게바로이것</p>
+          <p class="cart_c">78,000원</p>
+        </div>
+
+
+        <div class="best_img">
+          <div class="best_ib">
+            <img src="image/12.png" alt="" class="img_scale ji6">
+            </div>
+
+          <p class="cart_t">헬로 고져스</p>
+          <p class="cart_s">#꽃의향기를담아 #너에게줄게</p>
+          <p class="cart_c">92,000원</p>
+        </div>
+
+    </div>
+    </div>
+  </section>
+  <section class="campain">
+    <h1><img src="image/capm.png" alt=""> </h1>
+    <section id="section03">
+        <div class="section03">
+            <div class="section03-inner-wrap">
+               <div class="display-wrap">
+                <div class="display-frame">
+                    <div class="display">
+                        <ul class="section03-img">
+                            <li class="display01 main-pos" id="1"></li>
+                            <li class="display02 right-pos" id="2"></li>
+                            <li class="display03 back-pos" id="3"></li>
+                            <li class="display04 left-pos" id="4"></li>
+                        </ul>
+                    </div>
+                </div>
+               </div>
+               <span class="display-btn">
+                    <div class="display-before"></div>
+                    <div class="display-after"></div>
+                </span>
+            </div>
+
+        </div>
+    </section>
+
+  </section>
+  <footer>
+  <img src="image/footer.png" alt="">
+  <div class="container2">
+    <ul>
+      <li>스카우트</li>
+      <li>회사소개</li>
+      <li>개인정보처리방침</li>
+      <li>이용약관</li>
+      <li>고객센터</li>
+    </ul>
+    <p>LUSG소식을 가장 빠르게 만나고 싶으신가요? <br>지금 뉴스레터를 구독해보세요. <br> 언제든지 구독 해지하실 수 있습니다.</p>
+    <div class="p_box">
+      <p>구독하러하기</p>
+    </div>
+    <address>
+      서울특별시 서초구 서운로 138(서초동아티워)6층 | 사이트 운영자:러쉬코리아 | 대표이사:우미령 사업자등록번호:201-81-77964 사업자정보확인 | 통신판매업신고번호:2012-서울서초-0647 <br>
+      Copyrigth LUSHKOREAco.Ltd All rights reserved.
+    </address>
+  </div>
+
+  </footer>
+  </div>
+  </body>
+</html>
